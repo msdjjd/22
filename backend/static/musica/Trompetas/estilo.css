@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #F5F5F5; /* Gris claro */
+    color: #333; /* Color de texto principal */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #E91E63; /* Rosa */
+    background-color: #FFF; /* Fondo blanco para el título */
+    padding: 10px; /* Espacio alrededor del título */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    filter: brightness(200%);
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            white,
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+/* Estilos para las tarjetas de las marcas */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #FFC107; /* Amarillo */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: #2196F3; /* Azul */
+}
+
+.card-text {
+    font-size: 16px; /* Tamaño de fuente más grande */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    font-family: 'Arial Black', sans-serif;
+    background-color: #333; /* Gris oscuro */
+    color: #FFF; /* Texto blanco */
+}
+
+ul {
+    color: #FFF; /* Texto blanco */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #673AB7; /* Morado */
+    color: #FFF; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #FF5722; /* Naranja */
+    color: #FFF; /* Texto blanco */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Cambiar el color del botón Enviar */
+.btn-primary {
+    background-color: #E91E63; /* Rosa */
+    border-color: #FFC107; /* Amarillo */
+}
+
+.btn-primary:hover {
+    background-color: #D81B60; /* Rosa más oscuro */
+    border-color: #FFC107; /* Amarillo */
+}

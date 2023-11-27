@@ -1,0 +1,3 @@
+<?php
+const CONNECTION_INFO = ["host"=>"172.19.0.2", "port"=>"3306", "db"=>"sales","user"=>"studenttics", "pwd"=>"1234567890"];
+?> 
