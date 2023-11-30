@@ -1,17 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-    <head>
 
-        <link rel="icon" href="../static/musica/imag/TecNMBlanco.png" type="image/x-icon">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-            <link href="/static/ccs/estilo.css" rel="stylesheet" type="text/css">
-    </head>
-      <body>
-        
+<head>
+    <link rel="icon" href="/imag/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="/static/ccs/estilo.css" rel="stylesheet" type="text/css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
     <header class="text-center">
         <div class="neon">
             <span class="text" data-text="Bienvenidos a Oswaldo Armonía Musical">Bienvenidos a Oswaldo Armonía
@@ -21,66 +33,45 @@
         </div>
     </header>
 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="/static/musica/imag/TecNM.png" alt="Logo" style="width: 40px;">
+        </a>
+
+        <ul class="navbar-nav">
+            
+            <li class="nav-item">
+                <a class="btn btn-outline-info" href="/static/musica/Trompetas/trop.html">Trompetas</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-info" href="/static/musica/Trombones/trb.html">Trombones</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-info" href="/static/musica/Clarinetes/index.html">Clarinetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-info" href="/static/musica/Compr/compra.html">ENVIAR MENSAJE</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="flex-grow-1">
+       {CONTENT}
+    </div>
+
+    <footer class="text-center">
+        <p>&copy; Gracias por su referencia </p>
+        <ul>
+            <li><a href="mailto:L21920131@voaxaca.tecnm.mx">Correo Electrónico</a></li>
+            <li><a href="https://www.facebook.com/marisol.hurtado.988926?mibextid=ZbWKwL" target="_blank"
+                    rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="tel:9514313179">Número Telefónico</a></li>
+        </ul>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
 
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Logo -->
-    <a class="navbar-brand" href="#">
-        <img src="../static/musica/imag/TecNM.png" alt="Logo" style="width: 40px;">
-    </a>
-
-    <!-- Enlaces -->
-    <ul class="navbar-nav">
-        <a class="btn btn-outline-info" href="../static/musica/Trompetas/trop.html">Trompetas</a>
-        <a class="btn btn-outline-info" href="../static/musica/Trombones/trb.html">Trombones</a>
-        <a class="btn btn-outline-info" href="../static/musica/Clarinetes/index.html">Clarinetes</a>
-        <a class="btn btn-outline-info" href="../Compra/cop.html">ENVIAR MENSAJE</a>
-    </ul>
-</nav>
-<div class="row">
-    <div class="col-12 col-md-4">
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1"
-                    placeholder="name">
-            </div>
-            <div class="col-12 col-md-4">
-                <label for="text2" class="form-label">lugar</label>
-                <input type="text" class="form-control" id="text2" rows="3">
-            </div>
-            <div class="col-12 col-md-4">
-                <label for="email" class="form-label">codigo postal</label>
-                <input type="email" class="form-control" id="email" rows="3">
-            </div>
-
-        <label for="exampleFormControlInput1" class="form-label">Dirección de correo electrónico</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1"
-            placeholder="name@example.com">
-    </div>
-    <div class="col-12 col-md-4">
-        <label for="text2" class="form-label">numero telefonico </label>
-        <input type="text" class="form-control" id="text2" rows="3">
-    </div>
-    <div class="col-12 col-md-4">
-        <label for="email" class="form-label">asunto</label>
-        <input type="email" class="form-control" id="email" rows="3">
-    </div>
-</div>
-    
-        <footer>
-            <p>&copy; Gracias por su referencia </p>
-            <ul>
-                <li><a href="mailto:L21920131@voaxaca.tecnm.mx">Correo Electrónico</a></li>
-                <li><a href="https://www.facebook.com/marisol.hurtado.988926?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li><a href="tel:9514313179">Número Telefónico</a></li>
-            </ul>
-        </footer>
-
-    </body>
 </html>
-

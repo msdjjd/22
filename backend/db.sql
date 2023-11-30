@@ -26,22 +26,29 @@ CREATE TABLE product (
 , CONSTRAINT pkproduct PRIMARY KEY (id)
 );
 
--- insert data for both
+
+-- Inserción de productos de clarinetes
 INSERT INTO product (description, price, category, brand) 
-VALUES ('Mouse negro',400,'Electronics','Actek');
+VALUES ('Clarinet Yamaha YCL-255', 1200, 'Musical Instruments', 'Yamaha');
 
 INSERT INTO product (description, price, category, brand) 
-VALUES ('Laptop Asus',24000,'Electronics','Asus');
+VALUES ('Clarinet Buffet Crampon E12', 2000, 'Musical Instruments', 'Buffet Crampon');
+
+-- Inserción de productos de trombones
+INSERT INTO product (description, price, category, brand) 
+VALUES ('Trombone Bach TB200B', 1500, 'Musical Instruments', 'Bach');
 
 INSERT INTO product (description, price, category, brand) 
-VALUES ('Auricular Astro 50',4000,'Electronics','Astro');
+VALUES ('Trombone Yamaha YSL-354', 1800, 'Musical Instruments', 'Yamaha');
+
+-- Inserción de productos de trompetas
+INSERT INTO product (description, price, category, brand) 
+VALUES ('Trumpet Conn 52BSP', 1700, 'Musical Instruments', 'Conn');
 
 INSERT INTO product (description, price, category, brand) 
-VALUES ('Celular Samsung',24000,'Electronics','Samsung');
+VALUES ('Trumpet Yamaha YTR-2330', 1200, 'Musical Instruments', 'Yamaha');
 
-INSERT INTO product (description, price, category, brand) 
-VALUES ('Mesa rectangular',2800,'Furniture','Life time');
-
+-- Creación de usuario y asignación de privilegios
 CREATE USER studenttics WITH PASSWORD '1234567890';
-GRANT ALL PRIVILEGES ON DATABASE sales to studenttics;
+GRANT ALL PRIVILEGES ON DATABASE sales TO studenttics;
 GRANT ALL PRIVILEGES ON TABLE product TO studenttics;
